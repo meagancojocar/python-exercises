@@ -13,18 +13,16 @@ five_by_five_grid = [
 # first step is to add colum 6 and row 6
 
 for row in five_by_five_grid:
-    row.append('X')
-    print(row)
-    x_counter_row1 = 0 
+    x_counter = 0 
     for char in row:
         if char == "X":
-            x_counter_row1 +=1
+            x_counter +=1
+
 
 # for row in five_by_five_grid:
 
 
 # five_by_five_grid.append('X')
-    
 
 # output the grid to the user
 # for card in five_by_five_grid:
