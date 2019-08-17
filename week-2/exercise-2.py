@@ -13,8 +13,8 @@ five_by_five_grid = [
 
 x_counter = 0
 for row in five_by_five_grid:
-    for char in row:
-        if char == 'X':
+    for col in row:
+        if col == 'X':
             x_counter +=1
     if x_counter % 2 == 0:
         row.append('0')
@@ -23,18 +23,27 @@ for row in five_by_five_grid:
 
 
 five_by_five_grid.append(['0','X','0','X','0','X'])
-    
-# --- Instruction: output the grid to the user
-print(five_by_five_grid)
 
+six_by_six_grid = five_by_five_grid
+
+# --- Instruction: output the grid to the user
+for row in five_by_five_grid:
+    print(row)
 
 # --- Instruction: ask the user for the coordinate of the card to flip e.g. input could be: (0,2)
 message = input('What coordinate of card would you like to flip: ')
 
-message.strip('()')
+x = int(message[1])
+y = int(message[3])
 
+if six_by_six_grid[y][x] == 'X':
+    six_by_six_grid[y][x] == '0'
+else: 
+    six_by_six_grid[y][x] == 'X'
 
 # --- Instruction: output the grid with the flipped card
+for row in six_by_six_grid:
+    print(row)
 
 ## TASK 2
 
