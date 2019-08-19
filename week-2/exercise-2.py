@@ -21,7 +21,6 @@ for row in five_by_five_grid:
     else:
         row.append('X')
 
-
 five_by_five_grid.append(['0','X','0','X','0','X'])
 
 six_by_six_grid = five_by_five_grid
@@ -44,6 +43,8 @@ else:
 # --- Instruction: output the grid with the flipped card
 for row in six_by_six_grid:
     print(row)
+
+
 
 ## TASK 2
 
