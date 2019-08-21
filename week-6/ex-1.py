@@ -11,6 +11,9 @@ class Vehicle:
         self.max_speed = max_speed
         self.colour = colour
 
+    def start(self):
+        print(self.action)
+
 class Car(Vehicle):
 
     def __init__ (self, num_wheels, max_speed, num_doors, colour):
