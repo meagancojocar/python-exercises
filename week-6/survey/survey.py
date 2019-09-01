@@ -7,25 +7,32 @@
 
 #doing it all in one for simplicity 
 
-class Answer(self):
+class Answer:
 
-    def __init__(self,answer_letter,answer_text):
-        self.answer_letter = answer_letter 
+    def __init__(self, code, answer_text):
+        self.code = code 
         self.answer_text = answer_text
+        # self.next_question = Question()
+        # self.action = action
 
-class Question(self):
+class Question:
 
-    def __init__(self, question_letter, question_text):
-        self.question_l = question_letter
-        self.question_and_answers: {}
+    def __init__(self, question_text):
+        self.question_text = question_text
+        self.answers = []
+        self.next_question: Question()
 
     def add_answer(self, answer):
-        self.questions_and_answers.append(answer)
+        self.answers.append(answer)
+
+    def get_answer_by_code(self,answer):
+        pass
+
+class Section(Question):
     
-class Section(self):
-    
-    def __init__(self, qualifying_question, description):
-        self.qualifying_question = qualifying_question
+    def __init__(self, qualifying_question, first_question, description):
+        self.qualifying_question = Question()
+        self.first_question = Question()
         self.description = description
 
     def section_setup(self):
@@ -33,5 +40,12 @@ class Section(self):
         print(self.qualifying_question)
 
 
-# Section 1 Setup
-Section('Which type of respondent are you?',)
+# Qualifying Questions
+html_qualifying = Question('Would you say you have a good understanding of HTML & CSS?')
+html_qualifying.add_answer(Answer(code='A', answer_text='Yes'))
+html_qualifying.add_answer(Answer(code='B', answer_text='No'))
+
+python_qualifying = Question('Would you say you have a good understanding of Python & Django?')
+python_qualifying.add_answer(Answer(code='A', answer_text='Yes'))
+python_qualifying.add_answer(Answer(code='B', answer_text='No'))
+
