@@ -5,5 +5,33 @@
     # Each question will consist of the question text followed by a minimum of 2 answers for the user to choose between. The user will select their answer by typing in the code that corresponds to the answer, as given by your program.
     # The user must be forgiven for any incorrect input (i.e. your program must handle incorrect user input).
 
-from questions import Questions
-from sections import Sections
+#doing it all in one for simplicity 
+
+class Answer(self):
+
+    def __init__(self,answer_letter,answer_text):
+        self.answer_letter = answer_letter 
+        self.answer_text = answer_text
+
+class Question(self):
+
+    def __init__(self, question_letter, question_text):
+        self.question_l = question_letter
+        self.question_and_answers: {}
+
+    def add_answer(self, answer):
+        self.questions_and_answers.append(answer)
+    
+class Section(self):
+    
+    def __init__(self, qualifying_question, description):
+        self.qualifying_question = qualifying_question
+        self.description = description
+
+    def section_setup(self):
+        print(self.description)
+        print(self.qualifying_question)
+
+
+# Section 1 Setup
+Section('Which type of respondent are you?',)
