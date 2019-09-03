@@ -20,7 +20,7 @@ class Question:
     def __init__(self, question_text):
         self.question_text = question_text
         self.answers = []
-        self.next_question: Question()
+        self.next_question: next_question
 
     def add_answer(self, answer):
         self.answers.append(answer)
@@ -31,8 +31,8 @@ class Question:
 class Section(Question):
     
     def __init__(self, qualifying_question, first_question, description):
-        self.qualifying_question = Question()
-        self.first_question = Question()
+        self.qualifying_question = qualifying_question
+        self.first_question = first_question
         self.description = description
 
     def section_setup(self):
