@@ -5,7 +5,7 @@
     # Each question will consist of the question text followed by a minimum of 2 answers for the user to choose between. The user will select their answer by typing in the code that corresponds to the answer, as given by your program.
     # The user must be forgiven for any incorrect input (i.e. your program must handle incorrect user input).
 
-#doing it all in one for simplicity 
+#doing all classes in one for now for simplicity 
 
 class Answer:
 
